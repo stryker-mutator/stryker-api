@@ -47,13 +47,5 @@
     "sinon-chai": "^2.8.0",
     "typescript": "^1.8.9",
     "typings": "^1.0.4"
-  },
-  "dependencies": {
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-mocha-istanbul": "^5.0.1",
-    "grunt-ts": "^5.5.1",
-    "typings": "^1.0.4"
   }
 }
