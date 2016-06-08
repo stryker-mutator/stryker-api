@@ -1,0 +1,59 @@
+{
+  "name": "stryker-api",
+  "version": "0.0.1",
+  "description": "The api for the extendable JavaScript mutation testing framework Stryker",
+  "scripts": {
+    "pretest": "typings install",
+    "test": "grunt test",
+    "start": "concurrently \"npm run tsc:w\" \"grunt serve\"",
+    "tsc:w": "tsc -w",
+    "preversion": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stryker-mutator/stryker-api"
+  },
+  "keywords": [
+    "mutation testing",
+    "mutation",
+    "testing",
+    "test",
+    "js",
+    "stryker"
+  ],
+  "contributors": [
+    "Nico Jansen <nicoj@infosupport.com> https://nicojs.github.io",
+    "Simon de Lang <Simon.DeLang@infosupport.com https://github.com/simondel"
+  ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.2.0",
+    "concurrently": "^2.0.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mocha-istanbul": "^5.0.1",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-ts": "^5.5.1",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3",
+    "mocha-sinon": "^1.1.4",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0",
+    "typescript": "^1.8.9",
+    "typings": "^1.0.4"
+  },
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mocha-istanbul": "^5.0.1",
+    "grunt-ts": "^5.5.1",
+    "typings": "^1.0.4"
+  }
+}

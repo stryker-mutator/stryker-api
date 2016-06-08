@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowJs": false
+    },
+    "exclude": [
+        "node_modules",
+        "testResources",
+        "**/*.d.ts",
+        "*.d.ts"
+    ]
+}
