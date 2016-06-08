@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/stryker-mutator/stryker.svg?branch=master)](https://travis-ci.org/stryker-mutator/stryker-api)
 [![Gitter](https://badges.gitter.im/stryker-mutator/stryker.svg)](https://gitter.im/stryker-mutator/stryker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-![Stryker](stryker-80x80.png)
+![Stryker](https://github.com/stryker-mutator/stryker/raw/master/stryker-80x80.png)
 
 # Stryker API
 This is the repository for maintaining the API of the [Stryker](http://stryker-mutator.github.io) JavaScript mutation testing framework.
