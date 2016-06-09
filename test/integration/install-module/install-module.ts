@@ -13,10 +13,36 @@ describe('we have a module using stryker', function () {
       executor.exec('npm install', {}, (errors) => done(errors));
     });
 
-    describe('when compiling typescript', () => {
-      it('should not result in errors', (done) => {
+    describe('when typescript is compiled', () => {
+
+      let arrangeActAndAssertModule = (moduleToRun: string, partsToBeAsserted: string[]) => {
+        let stdOut: string;
+
+        describe(`and i use the "${moduleToRun}" module`, () => {
+          before((done) => {
+            executor.exec(`npm run use:${moduleToRun}`, {}, (errors, out) => {
+              stdOut = out;
+              done(errors);
+            })
+          });
+
+          it(`the output should contain ${partsToBeAsserted}`, () => {
+            partsToBeAsserted.forEach(part => expect(stdOut).to.contain(part));
+          });
+        });
+      }
+
+      before((done) => {
         executor.exec('npm run tsc', {}, (errors) => done(errors));
       });
+
+      arrangeActAndAssertModule('core', ['files', 'some', 'file']);
+      arrangeActAndAssertModule('config', ['plugins: [ \'stryker-*\' ]', 'port: 9234']);
+      arrangeActAndAssertModule('test_selector', ['selector-1']);
+      arrangeActAndAssertModule('mutant', ['nodeID: 3', 'type: \'node\'']);
+      arrangeActAndAssertModule('report', ['empty', 'all', 'status: 3', 'originalLines: \'string\'']);
+      arrangeActAndAssertModule('test_runner', ['MyTestRunner']);
+
     });
   });
 });

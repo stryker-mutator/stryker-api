@@ -6,7 +6,13 @@
   "scripts": {
     "tsc": "tsc",
     "postinstall": "typings install",
-    "stryker:config": "node node_modules/stryker/src/Stryker.js --configFile stryker.conf.js"
+    "useTestSelector": "node useTestSelector.js",
+    "use:core": "node useCore.js",
+    "use:config": "node useConfig.js",
+    "use:test_selector": "node useTestSelector.js",
+    "use:mutant": "node useMutant.js",
+    "use:report": "node useReport.js",
+    "use:test_runner": "node useTestRunner.js"
   },
   "author": "",
   "license": "ISC",
