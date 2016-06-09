@@ -42,7 +42,7 @@ abstract class Factory<TSettings, T> {
    */
   create(name: string, settings: TSettings): T {
     if (Object.keys(this.classMap).indexOf(name) < 0) {
-      throw new Error(`Could not find a ${this.factoryName} with name ${name}, did you install it correctly (for example: npm install --save-dev ${this.importSuggestion(name)}?`);
+      throw new Error(`Could not find a ${this.factoryName} with name ${name}, did you install it correctly (for example: npm install --save-dev ${this.importSuggestion(name)})?`);
     } else {
       return new this.classMap[name](settings);
     }
