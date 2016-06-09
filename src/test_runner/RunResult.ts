@@ -13,7 +13,7 @@ interface RunResult {
   /**
    * The names of the tests which were ran.
    */
-  specNames?: string[];
+  testNames?: string[];
 
   /**
    * The amount of tests that succeeded.

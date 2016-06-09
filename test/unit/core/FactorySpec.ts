@@ -23,7 +23,7 @@ describe('Factory', () => {
 
     it('should throw an error if it is requested to create a non-existing item', () => {
       expect(() => sut.create('not-exist', { settings: 'not exist' }))
-        .to.throw(Error, 'Could not find a test with name not-exist, did you install it correctly (for example: npm install --save-dev strker-not-exist)?');
+        .to.throw(Error, 'Could not find a test with name not-exist, did you install it correctly (for example: npm install --save-dev stryker-not-exist)?');
     });
 
     describe('when registering a test class "some-item"', () => {

@@ -8,7 +8,7 @@ interface MutantResult {
   replacement: string;
   originalLines: string;
   mutatedLines: string;
-  specsRan: string[];
+  testsRan: string[];
   location: Location;
   range: Range;
 }

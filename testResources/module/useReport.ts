@@ -36,7 +36,7 @@ let result: MutantResult = {
   replacement: 'string',
   originalLines: 'string',
   mutatedLines: 'string',
-  specsRan: [''],
+  testsRan: [''],
   location: null,
   range: [1, 2]
 }
