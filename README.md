@@ -15,7 +15,7 @@ You can extend Stryker in a number of ways.
 3. Create a `TestRunner` to bridge the gap between your test runner and Stryker
 4. Create a custom way of configuring Stryker by creating a `ConfigWriter` 
 
- All extension points work in the same basic way. 
+All extension points work in the same basic way. 
 
 1. Create a `constructor function` (or `class`)
 2. Register the `constructor function` to the correct `Factory`.
