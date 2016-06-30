@@ -25,7 +25,12 @@ interface StrykerOptions {
   testFramework?: string;
 
   /**
-   * The name of the test runner to use
+   * The name of the test selector to use
+   */
+  testSelector?: string;
+
+  /**
+   * The name of the test runner to use (default is the same name as the testFramework)
    */
   testRunner?: string;
   
