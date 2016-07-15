@@ -4,3 +4,4 @@ export {default as InputFile} from './src/core/InputFile';
 export {default as Position} from './src/core/Position';
 export {default as Location} from './src/core/Location';
 export {default as Range} from './src/core/Range';
+export {default as FilePatternDescriptor} from './src/core/FilePatternDescriptor';
