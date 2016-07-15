@@ -36,7 +36,7 @@ describe('we have a module using stryker', function () {
         executor.exec('npm run tsc', {}, (errors) => done(errors));
       });
 
-      arrangeActAndAssertModule('core', ['files', 'some', 'file']);
+      arrangeActAndAssertModule('core', ['files', 'some', 'file', 'pattern']);
       arrangeActAndAssertModule('config', ['plugins: [ \'stryker-*\' ]', 'port: 9234']);
       arrangeActAndAssertModule('test_selector', ['selector-1']);
       arrangeActAndAssertModule('mutant', ['nodeID: 3', 'type: \'node\'']);

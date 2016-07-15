@@ -1,4 +1,4 @@
-import FilePatternDescriptor from './FilePatternDescriptor';
+import InputFileDescriptor from './InputFileDescriptor';
 
 interface StrykerOptions {
   // this ensures that custom config for for example 'karma' can be added under the 'karma' key
@@ -12,11 +12,12 @@ interface StrykerOptions {
    * * { pattern: 'pattern', included: true } : 
    *    * The `pattern` property is mandatory and contains the globbing expression used for selecting the files
    *    * The `included` property is optional and determines whether or not this file should be loaded initially by the test-runner (default: true)
+   *    * The `mutated` property is optional and determines whether or not this file should be targeted for mutations (default: false)
    * 
    * @example
    *     files: ['test/helpers/**\/*.js', 'test/unit/**\/*.js', { pattern: 'src/**\/*.js', included: false }],
    */
-  files?: (string | FilePatternDescriptor)[];
+  files?: Array<string | InputFileDescriptor>;
 
   /**
    * A list of globbing expression used for selecting the files that should be mutated.

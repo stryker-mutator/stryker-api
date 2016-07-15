@@ -1,7 +1,7 @@
 
 interface InputFile{
   path: string;
-  shouldMutate: boolean;
+  mutated: boolean;
   included: boolean;
 }
 

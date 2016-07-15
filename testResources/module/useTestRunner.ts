@@ -9,7 +9,7 @@ class MyTestRunner implements TestRunner {
 }
 
 let runnerOptions: RunnerOptions = {
-  files: [{ path: 'some', shouldMutate: true, included: false }, { path: 'files', shouldMutate: false, included: true }],
+  files: [{ path: 'some', mutated: true, included: false }, { path: 'files', mutated: false, included: true }],
   port: 1,
   strykerOptions: null
 }
