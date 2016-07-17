@@ -1,8 +1,8 @@
-import {StrykerOptions, Factory, InputFile, Position, Location, Range} from 'stryker-api/core';
+import {StrykerOptions, Factory, InputFile, InputFileDescriptor, Position, Location, Range} from 'stryker-api/core';
 
 let options: StrykerOptions = {};
 let optionsAllArgs: StrykerOptions = {
-  files: ['some', 'file'],
+  files: ['some', { pattern: 'file' }, { included: false, mutated: true, pattern: 'some pattern' }],
   mutate: ['some'],
   configFile: 'string',
   testFramework: 'string',
@@ -17,11 +17,13 @@ let optionsAllArgs: StrykerOptions = {
 
 let inputFile: InputFile = {
   path: 'string',
-  shouldMutate: true
+  mutated: true,
+  included: true
 }
 
 let range: Range = [1, 2];
+let filePatternDescriptor: InputFileDescriptor = { included: true, mutated: false, pattern: '/files/**/*.js' };
 let position: Position = { column: 2, line: 2 };
 let location: Location = { start: position, end: position };
 
-console.log(range, position, location, inputFile, optionsAllArgs, options);
+console.log(range, position, location, inputFile, optionsAllArgs, options, filePatternDescriptor);

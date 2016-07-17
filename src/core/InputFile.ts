@@ -1,7 +1,8 @@
 
 interface InputFile{
   path: string;
-  shouldMutate: boolean;
+  mutated: boolean;
+  included: boolean;
 }
 
 export default InputFile;
