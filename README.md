@@ -10,14 +10,15 @@ Plugin creators should depend on this API rather than on the main Stryker reposi
 # Extension use cases
 You can extend Stryker in a number of ways.
 
-1. Create a custom `Reporter`
-2. Create a `TestSelector` for a test framework
-3. Create a `TestRunner` to bridge the gap between your test runner and Stryker
-4. Create a custom way of configuring Stryker by creating a `ConfigWriter` 
+1. Create your own `Mutator`
+2. Create a custom `Reporter`
+3. Create a `TestSelector` for a test framework
+4. Create a `TestRunner` to bridge the gap between your test runner and Stryker
+5. Create a custom way of configuring Stryker by creating a `ConfigWriter` 
 
 All extension points work in the same basic way. 
 
 1. Create a `constructor function` (or `class`)
 2. Register the `constructor function` to the correct `Factory`.
 
-More info comming soon. 
+More info comming soon. In the mean time, take a look at the [Stryker homepage](http://stryker-mutator.github.io). 
