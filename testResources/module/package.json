@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "postinstall": "typings install",
     "useTestSelector": "node useTestSelector.js",
     "use:core": "node useCore.js",
     "use:config": "node useConfig.js",
