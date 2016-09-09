@@ -1,3 +1,5 @@
+import * as estree from '../../estree';
+
 /**
  * Represents a class which can mutate parts of an Abstract Syntax Tree.
  */
@@ -17,7 +19,7 @@ interface Mutator {
    * @param copy A function to create a copy of an object.
    * @returns An array of mutated Nodes.
    */
-  applyMutations(node: ESTree.Node, copy: (obj: any, deep?: boolean) => any): ESTree.Node[];
+  applyMutations(node: estree.Node, copy: (obj: any, deep?: boolean) => any): estree.Node[];
 }
 
 export default Mutator;

@@ -18,7 +18,6 @@
   "license": "ISC",
   "devDependencies": {
     "stryker-api": "file:../../",
-    "typescript": "~1.8.9",
-    "typings": "^1.0.4"
+    "typescript": "^2.0.0"
   }
 }
