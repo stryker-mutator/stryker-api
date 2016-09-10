@@ -1,7 +1,50 @@
 import * as estree from 'estree';
 
-export type Node = Identifier | SimpleLiteral | RegExpLiteral | Program | FunctionDeclaration | FunctionExpression | ArrowFunctionExpression | SwitchCase | CatchClause | VariableDeclarator | ExpressionStatement | BlockStatement | EmptyStatement | DebuggerStatement | WithStatement | ReturnStatement | LabeledStatement | BreakStatement | ContinueStatement | IfStatement | SwitchStatement | ThrowStatement | TryStatement | WhileStatement | DoWhileStatement | ForStatement | ForInStatement | ForOfStatement | VariableDeclaration | ClassDeclaration | ThisExpression | ArrayExpression | ObjectExpression | YieldExpression | UnaryExpression | UpdateExpression | BinaryExpression | AssignmentExpression | LogicalExpression | MemberExpression | ConditionalExpression | SimpleCallExpression | NewExpression | SequenceExpression | TemplateLiteral | TaggedTemplateExpression | ClassExpression | MetaProperty | Property | AssignmentProperty | Super | TemplateElement | SpreadElement | ObjectPattern | ArrayPattern | RestElement | AssignmentPattern | ClassBody | MethodDefinition | ImportDeclaration | ExportNamedDeclaration | ExportDefaultDeclaration | ExportAllDeclaration | ImportSpecifier | ImportDefaultSpecifier | ImportNamespaceSpecifier | ExportSpecifier;
+export type Node =
+    Identifier | Literal | Program | Function | SwitchCase | CatchClause |
+    VariableDeclarator | Statement | Expression | Property |
+    AssignmentProperty | Super | TemplateElement | SpreadElement | Pattern |
+    ClassBody | Class | MethodDefinition | ModuleDeclaration | ModuleSpecifier;
 
+export type Function =
+    FunctionDeclaration | FunctionExpression | ArrowFunctionExpression;
+
+export type Statement =
+    ExpressionStatement | BlockStatement | EmptyStatement |
+    DebuggerStatement | WithStatement | ReturnStatement | LabeledStatement |
+    BreakStatement | ContinueStatement | IfStatement | SwitchStatement |
+    ThrowStatement | TryStatement | WhileStatement | DoWhileStatement |
+    ForStatement | ForInStatement | ForOfStatement | Declaration;
+
+export type Declaration =
+      FunctionDeclaration | VariableDeclaration | ClassDeclaration;
+export type CallExpression = SimpleCallExpression | NewExpression;
+
+export type Pattern =
+    Identifier | ObjectPattern | ArrayPattern | RestElement |
+    AssignmentPattern | MemberExpression;
+    export type Literal = SimpleLiteral | RegExpLiteral;
+
+export type Expression =
+    ThisExpression | ArrayExpression | ObjectExpression | FunctionExpression |
+    ArrowFunctionExpression | YieldExpression | Literal | UnaryExpression |
+    UpdateExpression | BinaryExpression | AssignmentExpression |
+    LogicalExpression | MemberExpression | ConditionalExpression |
+    CallExpression | NewExpression | SequenceExpression | TemplateLiteral |
+    TaggedTemplateExpression | ClassExpression | MetaProperty | Identifier;
+
+export type UnaryOperator = estree.UnaryOperator;
+export type BinaryOperator = estree.BinaryOperator;
+export type LogicalOperator = estree.LogicalOperator;
+export type AssignmentOperator = estree.AssignmentOperator;
+export type UpdateOperator = estree.UpdateOperator;
+export type Class = ClassDeclaration | ClassExpression;
+export type ModuleDeclaration =
+    ImportDeclaration | ExportNamedDeclaration | ExportDefaultDeclaration |
+    ExportAllDeclaration;
+export type ModuleSpecifier =
+    ImportSpecifier | ImportDefaultSpecifier | ImportNamespaceSpecifier |
+    ExportSpecifier;
 
 export interface Identifier extends estree.Identifier {
   nodeID: number;
