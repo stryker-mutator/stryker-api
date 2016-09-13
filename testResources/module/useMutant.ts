@@ -1,5 +1,6 @@
 import {Mutator, MutatorFactory} from 'stryker-api/mutant';
-import * as estree from 'stryker-api/estree';
+import * as estree from 'estree';
+import 'stryker-api/estree';
 
 class MyMutator implements Mutator {
   public name = 'myMutator';

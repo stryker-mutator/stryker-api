@@ -1,1 +1,1 @@
-export * from './src/estree/Node';
+export * from './src/estree/estree';
