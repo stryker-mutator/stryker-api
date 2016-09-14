@@ -1,11 +1,11 @@
 import Mutator from './Mutator';
-import {Factory} from '../../core';
+import { Factory } from '../../core';
 
 namespace MutatorFactory {
   /**
    * Represents a Factory for TestSelectors.
    */
-  class MutatorFactory extends Factory<void, Mutator>{
+  class MutatorFactory extends Factory<void, Mutator> {
     constructor() {
       super('mutator');
     }

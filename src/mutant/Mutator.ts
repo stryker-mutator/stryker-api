@@ -19,8 +19,7 @@ interface Mutator {
    * @param copy A function to create a copy of an object.
    * @returns An array of mutated Nodes.
    */
-  applyMutations(node: estree.Node, copy: (obj: any, deep?: boolean) => any): estree.Node[];
+  applyMutations(node: estree.Node, copy: <T extends estree.Node> (obj: T, deep?: boolean) => T): void | estree.Node | estree.Node[];
 }
-var a : estree.Node;
 
 export default Mutator;

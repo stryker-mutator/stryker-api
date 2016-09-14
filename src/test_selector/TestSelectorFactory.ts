@@ -1,4 +1,4 @@
-import {Factory} from '../../core';
+import { Factory } from '../../core';
 import TestSelectorSettings from './TestSelectorSettings';
 import TestSelector from './TestSelector';
 
@@ -6,7 +6,7 @@ namespace TestSelectorFactory {
   /**
    * Represents a Factory for TestSelectors.
    */
-  class TestSelectorFactory extends Factory<TestSelectorSettings, TestSelector>{
+  class TestSelectorFactory extends Factory<TestSelectorSettings, TestSelector> {
     constructor() {
       super('test selector');
     }
