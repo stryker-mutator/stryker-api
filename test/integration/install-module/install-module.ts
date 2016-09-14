@@ -6,7 +6,7 @@ describe('we have a module using stryker', function () {
   this.timeout(100000);
 
   describe('after installing Stryker', () => {
-    let executor: Executor
+    let executor: Executor;
 
     before((done) => {
       executor = new Executor('../../../testResources/module');
@@ -23,14 +23,14 @@ describe('we have a module using stryker', function () {
             executor.exec(`npm run use:${moduleToRun}`, {}, (errors, out) => {
               stdOut = out;
               done(errors);
-            })
+            });
           });
 
           it(`the output should contain ${partsToBeAsserted}`, () => {
             partsToBeAsserted.forEach(part => expect(stdOut).to.contain(part));
           });
         });
-      }
+      };
 
       before((done) => {
         executor.exec('npm run tsc', {}, (errors) => done(errors));

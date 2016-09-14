@@ -39,6 +39,6 @@ let result: MutantResult = {
   testsRan: [''],
   location: null,
   range: [1, 2]
-}
+};
 allReporter.onMutantTested(result);
 console.log(result);
