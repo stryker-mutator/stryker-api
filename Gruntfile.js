@@ -71,6 +71,9 @@ module.exports = function (grunt) {
     tslint: {
       src: {
         src: ['*.ts', 'src/**/*.ts']
+      },
+      test: {
+        src: ['test/**/*.ts', 'testResources/module/*.ts']
       }
     }
   });
