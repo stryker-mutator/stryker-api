@@ -1,0 +1,9 @@
+{
+    "critics": {
+        "lint": { "engine": "tslint" }
+    },
+    "test": [
+        "test/**",
+        "testResources/**"
+     ]
+}
