@@ -1,4 +1,4 @@
-import {StrykerOptions, Factory, InputFile, InputFileDescriptor, Position, Location, Range} from 'stryker-api/core';
+import { StrykerOptions, Factory, InputFile, InputFileDescriptor, Position, Location, Range } from 'stryker-api/core';
 
 let options: StrykerOptions = {};
 let optionsAllArgs: StrykerOptions = {
@@ -19,7 +19,7 @@ let inputFile: InputFile = {
   path: 'string',
   mutated: true,
   included: true
-}
+};
 
 let range: Range = [1, 2];
 let filePatternDescriptor: InputFileDescriptor = { included: true, mutated: false, pattern: '/files/**/*.js' };

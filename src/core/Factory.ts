@@ -19,7 +19,7 @@ abstract class Factory<TSettings, T> {
    * @returns A list of sorted items which are registered.
    */
   knownNames(): string[] {
-    var keys = Object.keys(this.classMap);
+    let keys = Object.keys(this.classMap);
     keys.sort();
     return keys;
   }

@@ -1,13 +1,13 @@
-import {Factory} from '../../../core';
-import {expect} from 'chai';
+import { Factory } from '../../../core';
+import { expect } from 'chai';
 
 describe('Factory', () => {
 
   class TestFactory extends Factory<{ settings: string }, { someInstance: string }>  {
   }
 
-  class TestItem{
-    constructor(private s: {settings: string}){}
+  class TestItem {
+    constructor(private s: { settings: string }) { }
 
     get someInstance() {
       return this.s.settings;
@@ -33,7 +33,7 @@ describe('Factory', () => {
       });
 
       it('should retrieve a new item when `create` is called with "some-item"', () => {
-        expect(sut.create('some-item', { settings: 'some item'})).to.be.instanceof(TestItem);
+        expect(sut.create('some-item', { settings: 'some item' })).to.be.instanceof(TestItem);
       });
 
     });

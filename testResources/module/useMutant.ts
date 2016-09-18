@@ -1,9 +1,11 @@
-import {StrykerNode, Mutator, MutatorFactory} from 'stryker-api/mutant';
+import {Mutator, MutatorFactory} from 'stryker-api/mutant';
+import * as estree from 'estree';
+import 'stryker-api/estree';
 
 class MyMutator implements Mutator {
   public name = 'myMutator';
 
-  applyMutations(node: ESTree.Node, copy: (obj: any, deep?: boolean) => any): ESTree.Node[] {
+  applyMutations(node: estree.Node, copy: (obj: any, deep?: boolean) => any): estree.Node[] {
     return null;
   }
 }
@@ -14,5 +16,5 @@ if (!(myMutator instanceof MyMutator)) {
   throw Error('Something wrong with myMutator');
 }
 
-let node: StrykerNode = { nodeID: 3, type: 'node' };
+let node: estree.Node = { nodeID: 3, type: 'Literal', value: null, raw: '' };
 console.log(node);

@@ -1,5 +1,5 @@
 import {Factory} from '../../core';
-import ConfigWriter from './ConfigWriter'
+import ConfigWriter from './ConfigWriter';
 
 namespace ConfigWriterFactory {
 

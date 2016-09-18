@@ -12,7 +12,7 @@ let runnerOptions: RunnerOptions = {
   files: [{ path: 'some', mutated: true, included: false }, { path: 'files', mutated: false, included: true }],
   port: 1,
   strykerOptions: null
-}
+};
 
 TestRunnerFactory.instance().register('MyTestRunner', MyTestRunner);
 let myTestRunner = TestRunnerFactory.instance().create('MyTestRunner', runnerOptions);
@@ -30,4 +30,4 @@ coverageData['32'] = 24;
 let coverageResult: CoverageResult = {
   s: coverageData,
   statementMap
-}
+};

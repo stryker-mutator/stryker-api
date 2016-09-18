@@ -1,5 +1,5 @@
 
-interface InputFile{
+interface InputFile {
   path: string;
   mutated: boolean;
   included: boolean;
