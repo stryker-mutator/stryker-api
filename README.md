@@ -12,7 +12,7 @@ You can extend Stryker in a number of ways.
 
 1. Create your own `Mutator`
 2. Create a custom `Reporter`
-3. Create a `TestSelector` for a test framework
+3. Create a `TestFramework` for a test framework
 4. Create a `TestRunner` to bridge the gap between your test runner and Stryker
 5. Create a custom way of configuring Stryker by creating a `ConfigWriter` 
 

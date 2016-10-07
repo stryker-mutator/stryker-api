@@ -1,19 +1,30 @@
+import TestState from './TestState';
+import {CoverageCollection} from './Coverage';
+
 /**
- * Indicates what the result of a test run was.
+ * Indicates the result of single test
  */
-enum TestResult {
+interface TestResult {
   /**
-   * The TestRunner was able to complete the run. NOTE: This can still mean that one or more tests failed.
+   * The full human readable name of the test
    */
-  Complete,
+  name: string;
   /**
-   * The TestRunner was unable to complete the run due to an unexpected error. For example: the code contains a syntax error
+   * The state of the test
    */
-  Error,
+  state: TestState;
   /**
-   * The TestRunner was unable to complete the test run fast enough.
+   * Optional: any error messages
    */
-  Timeout
+  errorMessages?: string[];
+  /**
+   * Optional: the time it took
+   */
+  timeSpentMs?: number;
+  /**
+   * Optional: the coverage result.
+   */
+  coverage?: CoverageCollection;
 }
 
 export default TestResult;

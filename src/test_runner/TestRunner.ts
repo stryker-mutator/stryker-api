@@ -1,10 +1,12 @@
 import RunResult from './RunResult';
 import RunOptions from './RunOptions';
+import { EventEmitter } from 'events';
+
 
 /**
  * Represents a TestRunner which can execute tests, resulting in a RunResult.
  */
-interface TestRunner {
+interface TestRunner extends EventEmitter {
 
   /**
    * Optional. When implemented, will be called before runs are done on this test runner.
