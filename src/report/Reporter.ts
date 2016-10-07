@@ -1,6 +1,5 @@
 import SourceFile from './SourceFile';
 import MutantResult from './MutantResult';
-import {StrykerOptions} from '../../core';
 
 /**
  * Represents a reporter which can report during or after a Stryker run

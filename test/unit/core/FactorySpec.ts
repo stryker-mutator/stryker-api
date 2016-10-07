@@ -27,7 +27,6 @@ describe('Factory', () => {
     });
 
     describe('when registering a test class "some-item"', () => {
-      let testItem: { someInstance: string };
       beforeEach(() => {
         sut.register('some-item', TestItem);
       });
