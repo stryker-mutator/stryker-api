@@ -1,5 +1,4 @@
 import TestState from './TestState';
-import {CoverageCollection} from './Coverage';
 
 /**
  * Indicates the result of single test
@@ -21,10 +20,6 @@ interface TestResult {
    * Optional: the time it took
    */
   timeSpentMs?: number;
-  /**
-   * Optional: the coverage result.
-   */
-  coverage?: CoverageCollection;
 }
 
 export default TestResult;

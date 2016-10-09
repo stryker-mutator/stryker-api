@@ -1,29 +1,30 @@
 import {
-  CoverageCollection, CoverageResult, CoverageData, 
+  CoverageCollection, CoverageResult, CoverageCollectionPerTest, CoverageData,
   StatementMap, TestResult, TestRunner, RunnerOptions,
-   RunResult, RunOptions, TestRunnerFactory,
+  RunResult, RunOptions, TestRunnerFactory,
   TestState, RunState
 } from 'stryker-api/test_runner';
-import {EventEmitter} from 'events'; 
+import { EventEmitter } from 'events';
 
 class MyTestRunner extends EventEmitter implements TestRunner {
 
   run(options: RunOptions) {
+    const coverage: CoverageCollection | CoverageCollectionPerTest = {
+      'a/file': {
+        s: {
+          '23': 32
+        }
+      }
+    };
     return new Promise<RunResult>(r => r({
       tests: [{
         state: TestState.Failed,
         name: '',
         errorMessages: [''],
-        timeSpentMs: 23,
-        coverage: {
-          'a/file': {
-            s: {
-              '23': 32
-            }
-          }
-        }
+        timeSpentMs: 23
       }],
-      state: RunState.Complete
+      state: RunState.Complete,
+      coverage
     }));
   };
 }

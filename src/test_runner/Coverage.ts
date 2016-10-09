@@ -1,6 +1,13 @@
 import {Location} from '../../core';
 
 /**
+ * Represents a collection of code coverage results per test run.
+ */
+export interface CoverageCollectionPerTest {
+  [testId: number]: CoverageCollection;
+}
+
+/**
  * Represents a collection of Coverage results for a set of files.
  */
 export interface CoverageCollection {

@@ -1,5 +1,6 @@
 import TestResult from './TestResult';
 import RunState from './RunState';
+import {CoverageCollection, CoverageCollectionPerTest} from './Coverage';
 
 /**
  * Represents the result of a testrun.
@@ -19,6 +20,11 @@ interface RunResult {
    * The state of the run
    */
   state: RunState;
+
+  /**
+   * Optional: the code coverage result of the run.
+   */
+  coverage?: CoverageCollection | CoverageCollectionPerTest;
 }
 
 export default RunResult;
