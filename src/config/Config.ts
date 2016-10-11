@@ -9,13 +9,12 @@ export default class Config implements StrykerOptions {
   mutate: string[];
   
   logLevel = 'info';
-  testFramework = 'jasmine';
-  testRunner = 'karma';
   timeoutMs = 5000;
   timeoutFactor = 1.5;
   plugins: string[] = ['stryker-*'];
   port = 9234;
-  reporter = ['progress', 'clear-text'];
+  reporter = ['progress', 'clear-text']; 
+  coverageAnalysis: 'perTest' = 'perTest';
 
   public set(newConfig: StrykerOptions) {
     if (newConfig) {
