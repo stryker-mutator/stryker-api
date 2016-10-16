@@ -14,7 +14,9 @@ export default class Config implements StrykerOptions {
   plugins: string[] = ['stryker-*'];
   port = 9234;
   reporter = ['progress', 'clear-text']; 
-  coverageAnalysis: 'perTest' = 'perTest';
+  coverageAnalysis: 'perTest' | 'all' | 'off' = 'perTest';
+  testRunner: string;
+  testFramework: string;
 
   public set(newConfig: StrykerOptions) {
     if (newConfig) {
