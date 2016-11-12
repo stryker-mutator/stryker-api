@@ -1,6 +1,6 @@
 import TestResult from './TestResult';
-import RunState from './RunState';
-import {CoverageCollection, CoverageCollectionPerTest} from './Coverage';
+import RunStatus from './RunStatus';
+import { CoverageCollection, CoverageCollectionPerTest } from './Coverage';
 
 /**
  * Represents the result of a testrun.
@@ -17,9 +17,9 @@ interface RunResult {
   errorMessages?: string[];
 
   /**
-   * The state of the run
+   * The status of the run
    */
-  state: RunState;
+  status: RunStatus;
 
   /**
    * Optional: the code coverage result of the run.

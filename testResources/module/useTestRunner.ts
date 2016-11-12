@@ -2,7 +2,7 @@ import {
   CoverageCollection, CoverageResult, CoverageCollectionPerTest, CoverageData,
   StatementMap, TestResult, TestRunner, RunnerOptions,
   RunResult, RunOptions, TestRunnerFactory,
-  TestState, RunState
+  TestStatus, RunStatus
 } from 'stryker-api/test_runner';
 import { EventEmitter } from 'events';
 
@@ -18,12 +18,12 @@ class MyTestRunner extends EventEmitter implements TestRunner {
     };
     return new Promise<RunResult>(r => r({
       tests: [{
-        state: TestState.Failed,
+        status: TestStatus.Failed,
         name: '',
         errorMessages: [''],
         timeSpentMs: 23
       }],
-      state: RunState.Complete,
+      status: RunStatus.Complete,
       coverage
     }));
   };

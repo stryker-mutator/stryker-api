@@ -1,7 +1,7 @@
 /**
  * Indicates what the result of a single test was.
  */
-enum TestState {
+enum TestStatus {
   /**
    * The test succeeded
    */
@@ -16,4 +16,4 @@ enum TestState {
   Skipped
 }
 
-export default TestState;
+export default TestStatus;

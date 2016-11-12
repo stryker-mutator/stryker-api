@@ -1,4 +1,4 @@
-import TestState from './TestState';
+import TestStatus from './TestStatus';
 
 /**
  * Indicates the result of single test
@@ -9,9 +9,9 @@ interface TestResult {
    */
   name: string;
   /**
-   * The state of the test
+   * The status of the test
    */
-  state: TestState;
+  status: TestStatus;
   /**
    * Optional: any error messages
    */

@@ -1,5 +1,5 @@
 
-enum RunState {
+enum RunStatus {
   /**
    * Indicates that a test run is completed with failed or succeeded tests
    */
@@ -14,4 +14,4 @@ enum RunState {
   Timeout
 }
 
-export default RunState;
+export default RunStatus;
