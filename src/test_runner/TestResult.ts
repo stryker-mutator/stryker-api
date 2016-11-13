@@ -1,7 +1,7 @@
 import TestStatus from './TestStatus';
 
 /**
- * Indicates the result of single test
+ * Indicates the result of a single test
  */
 interface TestResult {
   /**
