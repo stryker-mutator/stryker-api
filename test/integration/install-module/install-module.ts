@@ -40,7 +40,7 @@ describe('we have a module using stryker', function () {
       arrangeActAndAssertModule('config', ['plugins: [ \'stryker-*\' ]', 'port: 9234']);
       arrangeActAndAssertModule('test_framework', ['framework-1']);
       arrangeActAndAssertModule('mutant', ['nodeID: 3', 'type: \'Literal\'']);
-      arrangeActAndAssertModule('report', ['empty', 'all', 'status: 3', 'originalLines: \'string\'']);
+      arrangeActAndAssertModule('report', ['empty', 'all', 'status: 3', 'originalLines: \'string\'', 'Mutant status error: Error']);
       arrangeActAndAssertModule('test_runner', ['MyTestRunner']);
 
     });
