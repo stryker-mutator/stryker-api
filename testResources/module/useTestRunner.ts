@@ -20,7 +20,7 @@ class MyTestRunner extends EventEmitter implements TestRunner {
       tests: [{
         status: TestStatus.Failed,
         name: '',
-        errorMessages: [''],
+        failureMessages: [''],
         timeSpentMs: 23
       }],
       status: RunStatus.Complete,

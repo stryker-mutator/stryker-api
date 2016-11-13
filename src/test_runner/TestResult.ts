@@ -13,13 +13,13 @@ interface TestResult {
    */
   status: TestStatus;
   /**
-   * Optional: any error messages
+   * The time it took to run the test
    */
-  errorMessages?: string[];
+  timeSpentMs: number;
   /**
-   * Optional: the time it took
+   * Optional: messages in case of status: Failed
    */
-  timeSpentMs?: number;
+  failureMessages?: string[];
 }
 
 export default TestResult;
