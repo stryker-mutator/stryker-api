@@ -3,7 +3,7 @@ import { Factory } from '../../core';
 
 namespace MutatorFactory {
   /**
-   * Represents a Factory for TestSelectors.
+   * Represents a Factory for TestFrameworks.
    */
   class MutatorFactory extends Factory<void, Mutator> {
     constructor() {

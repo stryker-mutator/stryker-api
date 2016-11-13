@@ -5,7 +5,7 @@ import { StrykerOptions, InputFile } from '../../core';
  */
 interface RunnerOptions {
   /**
-   * A collection of paths to the files
+   * The collection of files to load into the test runner in that exact order.
    */
   files: InputFile[];
 
@@ -18,11 +18,6 @@ interface RunnerOptions {
    * The underlying strykerOptions
    */
   strykerOptions: StrykerOptions;
-
-  /**
-   * Enable code coverage. When enabled, the calling party is interested in code coverage.
-   */
-  coverageEnabled?: boolean;
 }
 
 export default RunnerOptions; 

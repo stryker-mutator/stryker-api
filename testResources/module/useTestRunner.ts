@@ -1,10 +1,31 @@
-import {CoverageCollection, CoverageResult, CoverageData, BrancheCoverageData, FunctionMap, FunctionDescription,
-  BranchMap, BranchDescription, StatementMap, TestResult, TestRunner, RunnerOptions, RunResult, RunOptions, TestRunnerFactory} from 'stryker-api/test_runner';
+import {
+  CoverageCollection, CoverageResult, CoverageCollectionPerTest, CoverageData,
+  StatementMap, TestResult, TestRunner, RunnerOptions,
+  RunResult, RunOptions, TestRunnerFactory,
+  TestStatus, RunStatus
+} from 'stryker-api/test_runner';
+import { EventEmitter } from 'events';
 
-class MyTestRunner implements TestRunner {
+class MyTestRunner extends EventEmitter implements TestRunner {
 
   run(options: RunOptions) {
-    return new Promise<RunResult>(r => r(null));
+    const coverage: CoverageCollection | CoverageCollectionPerTest = {
+      'a/file': {
+        s: {
+          '23': 32
+        }
+      }
+    };
+    return new Promise<RunResult>(r => r({
+      tests: [{
+        status: TestStatus.Failed,
+        name: '',
+        failureMessages: [''],
+        timeSpentMs: 23
+      }],
+      status: RunStatus.Complete,
+      coverage
+    }));
   };
 }
 
@@ -21,13 +42,10 @@ if (!(myTestRunner instanceof MyTestRunner)) {
 }
 
 console.log(TestRunnerFactory.instance().knownNames());
-let brancheCoverageData: BrancheCoverageData = {};
 let coverageData: CoverageData = {};
 let statementMap: StatementMap = {};
 statementMap['23'] = { start: { line: 23, column: 23 }, end: { line: 42, column: 42 } };
-brancheCoverageData['s'] = [2, 4];
 coverageData['32'] = 24;
 let coverageResult: CoverageResult = {
   s: coverageData,
-  statementMap
 };

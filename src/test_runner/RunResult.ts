@@ -1,40 +1,30 @@
-import {CoverageCollection} from './Coverage';
 import TestResult from './TestResult';
+import RunStatus from './RunStatus';
+import { CoverageCollection, CoverageCollectionPerTest } from './Coverage';
 
 /**
  * Represents the result of a testrun.
  */
 interface RunResult {
   /**
-   * The result of the test run.
+   * The individual test results.
    */
-  result: TestResult;
+  tests: TestResult[];
 
   /**
-   * The names of the tests which were ran.
+   * If `state` is `error`, this collection should contain the error messages
    */
-  testNames?: string[];
-
-  /**
-   * The amount of tests that succeeded.
-   */
-  succeeded?: number;
-
-  /**
-   * The amount of tests that failed.
-   */
-  failed?: number;
-
-  /**
-   * The time that the test run took (in milliseconds).
-   */
-  timeSpent?: number;
-
-  /**
-   * The code coverage which may have been collected during the test run.
-   */
-  coverage?: CoverageCollection;
   errorMessages?: string[];
+
+  /**
+   * The status of the run
+   */
+  status: RunStatus;
+
+  /**
+   * Optional: the code coverage result of the run.
+   */
+  coverage?: CoverageCollection | CoverageCollectionPerTest;
 }
 
 export default RunResult;

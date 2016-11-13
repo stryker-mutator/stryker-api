@@ -1,19 +1,25 @@
+import TestStatus from './TestStatus';
+
 /**
- * Indicates what the result of a test run was.
+ * Indicates the result of a single test
  */
-enum TestResult {
+interface TestResult {
   /**
-   * The TestRunner was able to complete the run. NOTE: This can still mean that one or more tests failed.
+   * The full human readable name of the test
    */
-  Complete,
+  name: string;
   /**
-   * The TestRunner was unable to complete the run due to an unexpected error. For example: the code contains a syntax error
+   * The status of the test
    */
-  Error,
+  status: TestStatus;
   /**
-   * The TestRunner was unable to complete the test run fast enough.
+   * The time it took to run the test
    */
-  Timeout
+  timeSpentMs: number;
+  /**
+   * Optional: messages in case of status: Failed
+   */
+  failureMessages?: string[];
 }
 
 export default TestResult;

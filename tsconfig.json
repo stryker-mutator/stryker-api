@@ -9,7 +9,11 @@
         "removeComments": false,
         "declaration": true,
         "forceConsistentCasingInFileNames": true,
-        "allowJs": false
+        "allowJs": false,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "noResolve": true,
+        "strictNullChecks": true
     },
     "exclude": [
         "node_modules",

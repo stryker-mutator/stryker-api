@@ -1,4 +1,4 @@
-import * as estree from 'estree';
+import 'estree';
 
 declare module 'estree' {
 

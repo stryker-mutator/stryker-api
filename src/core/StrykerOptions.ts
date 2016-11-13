@@ -35,14 +35,19 @@ interface StrykerOptions {
   testFramework?: string;
 
   /**
-   * The name of the test selector to use
-   */
-  testSelector?: string;
-
-  /**
    * The name of the test runner to use (default is the same name as the testFramework)
    */
   testRunner?: string;
+
+  /**
+   * Indicates which coverage analysis strategy to use.
+   * During mutation testion, stryker will try to only run the tests that cover a particular line of code.
+   * 
+   * 'perTest' (default): Analyse coverage per test.
+   * 'all': Analyse the coverage for the entire test suite.
+   * 'off': Don't use coverage analysis 
+   */
+  coverageAnalysis?: 'perTest' | 'all' | 'off';
 
   /**
    * The name (or names) of the reporter to use

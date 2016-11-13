@@ -1,24 +1,24 @@
 enum MutantStatus {
 
   /**
-   * The status of an untested Mutant.
+   * The status of a survived mutant, because it was not covered by any test.
    */
-  UNTESTED,
+  NoCoverage,
 
   /**
-   * The status of a killed Mutant.
+   * The status of a killed mutant.
    */
-  KILLED,
+  Killed,
 
   /**
-   * The status of a survived Mutant.
+   * The status of a survived mutant.
    */
-  SURVIVED,
+  Survived,
 
   /**
-   * The status of a timed out Mutant.
+   * The status of a timed out mutant.
    */
-  TIMEDOUT
+  TimedOut
 }
 
 export default MutantStatus;

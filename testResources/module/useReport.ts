@@ -32,7 +32,7 @@ if (!(allReporter instanceof AllReporter)) {
 let result: MutantResult = {
   sourceFilePath: 'string',
   mutatorName: 'string',
-  status: MutantStatus.TIMEDOUT,
+  status: MutantStatus.TimedOut,
   replacement: 'string',
   originalLines: 'string',
   mutatedLines: 'string',

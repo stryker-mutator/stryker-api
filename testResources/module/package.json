@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "useTestSelector": "node useTestSelector.js",
+    "useTestFramework": "node useTestFramework.js",
     "use:core": "node useCore.js",
     "use:config": "node useConfig.js",
-    "use:test_selector": "node useTestSelector.js",
+    "use:test_framework": "node useTestFramework.js",
     "use:mutant": "node useMutant.js",
     "use:report": "node useReport.js",
     "use:test_runner": "node useTestRunner.js"
