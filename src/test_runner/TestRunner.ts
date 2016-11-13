@@ -7,9 +7,9 @@ import { EventEmitter } from 'events';
  * Represents a TestRunner which can execute tests, resulting in a RunResult.
  * 
  * A test runner should:
- *  - Report per a `testResult` per test. See `TestResult` interfact to know what is expected.
- *  - Emit `'test_done'` event with a TestResult as argument every time a test is executed (for reporting purposes)
- *  - Report on code coverage after the initial test run (maybe, see below)
+ *  - Report per a `testResult` per test. See `TestResult` interface to know what is expected.
+ *  - Emit a `'test_done'` event with a TestResult as an argument every time a test is executed (for reporting purposes).
+ *  - Report on code coverage after the initial test run (maybe, see below).
  * 
  * ## A note on code coverage:
  * 
@@ -29,11 +29,11 @@ import { EventEmitter } from 'events';
  * In case of 3, Stryker will also inject beforeEach and afterEach hooks (specific to each test framework) in distinct between specific tests.
  * 
  * At the end of the test run, the code coverage report is ready in a global variable called `__coverage__`. Node based test runners 
- * which run there tests in the same process as the test runner is spawned in actually don't have to do any work, Stryker will be able 
+ * which run their tests in the same process as the test runner is spawned in actually don't have to do any work, Stryker will be able 
  * to pick up the report globally. However, if running in worker processes or a browser, it is the test runner's responsibility to 
  * report the `__coverage__` at the end of the test run. 
  * 
- * If it doesn't exists globally, you don't have to do anything. In that case its not an initial test run and there was no code instrumented.
+ * If it doesn't exists globally, you don't have to do anything. In that case it's not an initial test run and there was no code instrumented.
  */
 interface TestRunner extends EventEmitter {
 
