@@ -5,18 +5,18 @@ interface TestFramework {
 
   /**
    * Creates a code fragment which, if included in a test run,
-   * is run before a particular test is run.
+   * is ran before a particular test is run.
    */
   beforeEach(codeFragment: string): string;
 
   /**
    * Creates a code fragment which, if included in a test run,
-   * is run before a particular test is run.
+   * is ran before a particular test is run.
    */
   afterEach(codeFragment: string): string;
 
   /**
-   * Creates a code fragment which, in included in a test run,
+   * Creates a code fragment which, if included in a test run,
    * will be responsible for filtering out tests with given ids.
    * The first test gets id 0, the second id 1, etc.
    * 
