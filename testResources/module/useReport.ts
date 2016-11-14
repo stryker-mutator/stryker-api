@@ -42,3 +42,4 @@ let result: MutantResult = {
 };
 allReporter.onMutantTested(result);
 console.log(result);
+console.log(`Mutant status error: ${MutantStatus[MutantStatus.Error]}`);
