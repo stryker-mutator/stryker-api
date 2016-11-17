@@ -17,6 +17,7 @@ export default class Config implements StrykerOptions {
   coverageAnalysis: 'perTest' | 'all' | 'off' = 'perTest';
   testRunner: string;
   testFramework: string;
+  maxConcurrentTestRunners: number = Infinity;
 
   public set(newConfig: StrykerOptions) {
     if (newConfig) {
