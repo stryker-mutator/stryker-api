@@ -25,6 +25,12 @@ interface StrykerOptions {
   mutate?: string[];
 
   /**
+   * Specify the maximum number of concurrent test runners (useful if you don't want to use
+   all the CPU cores of your machine). If not specified, Stryker will use all the CPUs in the machine.
+   */
+  maxConcurrentTestRunners?: number;
+
+  /**
    * A location to a config file. That file should export a function which accepts a "config" object which it uses to configure stryker
    */
   configFile?: string;
