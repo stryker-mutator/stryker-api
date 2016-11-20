@@ -1,3 +1,16 @@
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/stryker-mutator/stryker-api/compare/v0.2.1...v0.4.0) (2016-11-20)
+
+
+### Features
+
+* **configurable-concurrency:** Add setting for maxConcurrentTestRunners ([731a05b](https://github.com/stryker-mutator/stryker-api/commit/731a05b))
+* **configurable-concurrency:** Default value ([32abab2](https://github.com/stryker-mutator/stryker-api/commit/32abab2))
+* **mutant-status:** Add `Error` to `MutantStatus` ([#7](https://github.com/stryker-mutator/stryker-api/issues/7)) ([e9df479](https://github.com/stryker-mutator/stryker-api/commit/e9df479))
+* **new-api:** Allow for one-pass coverage/test ([#6](https://github.com/stryker-mutator/stryker-api/issues/6)) ([d42c3c7](https://github.com/stryker-mutator/stryker-api/commit/d42c3c7))
+
+
+
 
 <a name="0.2.1"></a>
 ## 0.2.1 (2016-10-03)
