@@ -75,7 +75,43 @@ module.exports = function (grunt) {
       test: {
         src: ['test/**/*.ts', 'testResources/module/*.ts']
       }
+    },
+    'npm-contributors': {
+      options: {
+        commitMessage: 'chore: update contributors'
+      }
+    },
+    conventionalChangelog: {
+      release: {
+        options: {
+          changelogOpts: {
+            preset: 'angular'
+          }
+        },
+        src: 'CHANGELOG.md'
+      }
+    },
+    bump: {
+      options: {
+        commitFiles: [
+          'package.json',
+          'CHANGELOG.md'
+        ],
+        commitMessage: 'chore: release v%VERSION%',
+        prereleaseName: 'rc'
+      }
     }
+  });
+
+  grunt.registerTask('release', 'Build, bump and publish to NPM.', function (type) {
+    grunt.task.run([
+      'test',
+      'npm-contributors',
+      'bump:' + (type || 'patch') + ':bump-only',
+      'conventionalChangelog',
+      'bump-commit',
+      'npm-publish'
+    ]);
   });
 
   grunt.registerTask('default', ['test']);
