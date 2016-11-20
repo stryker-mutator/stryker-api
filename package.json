@@ -20,8 +20,8 @@
     "stryker"
   ],
   "contributors": [
-    "Nico Jansen <nicoj@infosupport.com> https://nicojs.github.io",
-    "Simon de Lang <Simon.DeLang@infosupport.com https://github.com/simondel"
+    "Nico Jansen <jansennico@gmail.com>",
+    "Jeremy Nagel <jeremy.nagel@learnosity.com>"
   ],
   "license": "Apache-2.0",
   "engines": {
