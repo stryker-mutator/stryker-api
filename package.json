@@ -20,8 +20,9 @@
     "stryker"
   ],
   "contributors": [
-    "Nico Jansen <jansennico@gmail.com>",
-    "Jeremy Nagel <jeremy.nagel@learnosity.com>"
+    "nicojs <jansennico@gmail.com>",
+    "Jeremy Nagel <jeremy.nagel@learnosity.com>",
+    "Philipp Weissenbacher <philipp.weissenbacher@gmail.com>"
   ],
   "license": "Apache-2.0",
   "engines": {
