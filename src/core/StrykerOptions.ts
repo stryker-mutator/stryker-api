@@ -20,9 +20,21 @@ interface StrykerOptions {
   files?: Array<string | InputFileDescriptor>;
 
   /**
+   * A list of globbing expressions used for selecting the files to exclude from the `files`.
+   * @see files
+   */
+  exclude?: Array<string>;
+
+  /**
    * A list of globbing expression used for selecting the files that should be mutated.
    */
-  mutate?: string[];
+  mutate?: Array<string>;
+
+  /**
+   * A list of globbing expression used for selecting the files that should be excluded from mutation.
+   * @see mutate
+   */
+  mutateExclude?: Array<string>;
 
   /**
    * Specify the maximum number of concurrent test runners. Useful if you don't want to use

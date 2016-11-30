@@ -3,7 +3,9 @@ import { StrykerOptions, Factory, InputFile, InputFileDescriptor, Position, Loca
 let options: StrykerOptions = {};
 let optionsAllArgs: StrykerOptions = {
   files: ['some', { pattern: 'file' }, { included: false, mutated: true, pattern: 'some pattern' }],
+  filesExclude: ['exclusion'],
   mutate: ['some'],
+  mutateExclude: ['mutateExclusion'],
   configFile: 'string',
   testFramework: 'string',
   testRunner: 'string',
