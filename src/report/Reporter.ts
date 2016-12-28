@@ -23,7 +23,7 @@ interface Reporter {
    * Called when mutants are matched with tests
    * @param results The immutable array of mutants
    */
-  onAllMutantsMatchedWithTests?(results: MatchedMutant[]): void;
+  onAllMutantsMatchedWithTests?(results: ReadonlyArray<MatchedMutant>): void;
 
   /**
    * Called when a mutant was tested
