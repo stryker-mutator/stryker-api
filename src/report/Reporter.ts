@@ -1,5 +1,6 @@
 import SourceFile from './SourceFile';
 import MutantResult from './MutantResult';
+import MatchedMutant from './MatchedMutant';
 
 /**
  * Represents a reporter which can report during or after a Stryker run
@@ -17,6 +18,12 @@ interface Reporter {
    * @param files The immutable source files 
    */
   onAllSourceFilesRead?(files: SourceFile[]): void;
+
+  /**
+   * Called when mutants are matched with tests
+   * @param results The immutable array of mutants
+   */
+  onAllMutantsMatchedWithTests?(results: MatchedMutant[]): void;
 
   /**
    * Called when a mutant was tested
