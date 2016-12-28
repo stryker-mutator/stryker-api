@@ -1,4 +1,4 @@
-import {Reporter, MutantResult, MutantStatus, ReporterFactory, SourceFile} from 'stryker-api/report';
+import { Reporter, MutantResult, MutantStatus, ReporterFactory, SourceFile, MatchedMutant } from 'stryker-api/report';
 
 class EmptyReporter {
 }
@@ -11,6 +11,8 @@ class AllReporter implements Reporter {
   onMutantTested(result: MutantResult) {
   }
   onAllMutantsTested(results: MutantResult[]) {
+  }
+  onAllMutantsMatchedWithTests(mutants: ReadonlyArray<MatchedMutant>) {
   }
   wrapUp() {
     return new Promise<void>(r => r());
@@ -43,3 +45,15 @@ let result: MutantResult = {
 allReporter.onMutantTested(result);
 console.log(result);
 console.log(`Mutant status error: ${MutantStatus[MutantStatus.Error]}`);
+
+const matchedMutant: MatchedMutant = {
+   mutatorName: '',
+   scopeTestIds: [52],
+   timeSpentScopeTests: 52,
+   fileName: 'string',
+   replacement: 'string'
+};
+
+allReporter.onAllMutantsMatchedWithTests([Object.freeze(matchedMutant)]);
+const allMutants = Object.freeze([matchedMutant]);
+allReporter.onAllMutantsMatchedWithTests(allMutants);
