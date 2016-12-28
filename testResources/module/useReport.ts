@@ -48,9 +48,9 @@ console.log(`Mutant status error: ${MutantStatus[MutantStatus.Error]}`);
 
 const matchedMutant: MatchedMutant = {
    mutatorName: '',
-   scopeTestIds: [52],
-   timeSpentScopeTests: 52,
-   fileName: 'string',
+   scopedTestIds: [52],
+   timeSpentScopedTests: 52,
+   filename: 'string',
    replacement: 'string'
 };
 
