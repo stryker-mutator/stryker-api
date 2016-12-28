@@ -1,8 +1,8 @@
 interface MatchedMutant {
   readonly mutatorName: string;
-  readonly scopeTestIds: number[];
-  readonly timeSpentScopeTests: number;
-  readonly fileName: string;
+  readonly scopedTestIds: number[];
+  readonly timeSpentScopedTests: number;
+  readonly filename: string;
   readonly replacement: string;
 }
 
