@@ -1,6 +1,6 @@
 {
   "name": "stryker-api",
-  "version": "0.4.2-rc1",
+  "version": "0.4.1",
   "description": "The api for the extendable JavaScript mutation testing framework Stryker",
   "scripts": {
     "test": "grunt test",
@@ -26,7 +26,7 @@
   ],
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4"
   },
   "devDependencies": {
     "@types/chai": "^3.4.32",
