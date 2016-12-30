@@ -1,3 +1,18 @@
+<a name="0.4.2"></a>
+## [0.4.2](https://github.com/stryker-mutator/stryker-api/compare/v0.4.1...v0.4.2) (2016-12-30)
+
+
+### Bug Fixes
+
+* **config:** Update `files` array type ([#12](https://github.com/stryker-mutator/stryker-api/issues/12)) ([9874730](https://github.com/stryker-mutator/stryker-api/commit/9874730))
+
+
+### Features
+
+* **report:** Report matched mutants ([#13](https://github.com/stryker-mutator/stryker-api/issues/13)) ([b0e2f6a](https://github.com/stryker-mutator/stryker-api/commit/b0e2f6a))
+
+
+
 <a name="0.4.1"></a>
 ## [0.4.1](https://github.com/stryker-mutator/stryker-api/compare/v0.4.0...v0.4.1) (2016-11-30)
 
