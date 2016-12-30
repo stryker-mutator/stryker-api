@@ -21,8 +21,10 @@
   ],
   "contributors": [
     "nicojs <jansennico@gmail.com>",
+    "Alex van Assem <avassem@gmail.com>",
     "Jeremy Nagel <jeremy.nagel@learnosity.com>",
-    "Philipp Weissenbacher <philipp.weissenbacher@gmail.com>"
+    "Philipp Weissenbacher <philipp.weissenbacher@gmail.com>",
+    "Simon de Lang <simondelang@gmail.com>"
   ],
   "license": "Apache-2.0",
   "engines": {
