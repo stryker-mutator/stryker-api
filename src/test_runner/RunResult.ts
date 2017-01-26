@@ -1,9 +1,9 @@
 import TestResult from './TestResult';
 import RunStatus from './RunStatus';
-import { CoverageCollection, CoverageCollectionPerTest } from './Coverage';
+import { CoverageCollection, CoveragePerTestResult } from './Coverage';
 
 /**
- * Represents the result of a testrun.
+ * Represents the result of a test run.
  */
 interface RunResult {
   /**
@@ -24,7 +24,7 @@ interface RunResult {
   /**
    * Optional: the code coverage result of the run.
    */
-  coverage?: CoverageCollection | CoverageCollectionPerTest;
+  coverage?: CoverageCollection | CoveragePerTestResult;
 }
 
 export default RunResult;

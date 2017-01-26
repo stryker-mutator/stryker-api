@@ -3,6 +3,21 @@ import {Location} from '../../core';
 /**
  * Represents a collection of code coverage results per test run.
  */
+export interface CoveragePerTestResult {
+  /**
+   * The baseline coverage which is true for each test run. 
+   * This baseline should be taken when all files all loaded, but before tests are ran. 
+   */
+  baseline: CoverageCollection;
+  /**
+   * The deviations with respect to the baseline per test.  
+   */
+  deviations: CoverageCollectionPerTest;
+}
+
+/**
+ * Represents a collection of code coverage results per test run.
+ */
 export interface CoverageCollectionPerTest {
   [testId: number]: CoverageCollection;
 }
