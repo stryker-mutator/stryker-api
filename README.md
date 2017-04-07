@@ -1,3 +1,6 @@
+# This repository has been [moved](https://github.com/stryker-mutator/stryker)
+This repository will be maintained in the main stryker repository. This stryker-api repository only exists to save our history.
+
 [![Build Status](https://travis-ci.org/stryker-mutator/stryker.svg?branch=master)](https://travis-ci.org/stryker-mutator/stryker-api)
 [![Gitter](https://badges.gitter.im/stryker-mutator/stryker.svg)](https://gitter.im/stryker-mutator/stryker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
